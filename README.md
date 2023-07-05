@@ -17,6 +17,7 @@ Usage
 Configuration
 
 There are no specific configuration settings required for this project.
+
 Contributing
 
 Contributions are welcome! If you find any bugs or want to suggest improvements!
