@@ -1,0 +1,163 @@
+@import '../styles/modules/variables';
+@import '../styles/modules/mixins';
+
+::ng-deep {
+    .form-container {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        width: 94%;
+        height: 100%;
+        flex-direction: column;
+        padding: 0 30px !important;
+        background-color: #EFEFEF !important;
+        border: none;
+        box-shadow: unset !important;
+        position: absolute !important;
+
+        form {
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            max-width: 768px;
+            max-height: 950px;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff !important;
+            box-shadow: 0px 3px 6px #00000029;
+            border-radius: 4px;
+
+            @media (max-width:470.9px) {
+                max-width: 370px;
+                max-height: 370px;
+            }
+
+            .form-group {
+                height: 100%;
+                width: 100%;
+                max-width: 328px;
+                max-height: 326px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
+                img {
+                    margin-bottom: 16px;
+                    align-self: center;
+                    width: 128px;
+                    height: 128px;
+                }
+
+                mat-form-field {
+                    width: 100%;
+                    height: 100%;
+                    cursor: text;
+                    max-width: 328px;
+                    max-height: 56px;
+                    margin-bottom: 16px;
+                    color: #B00020 !important;
+                    letter-spacing: 0.15px;
+                    font-size: 16px !important;
+                    align-self: center;
+                    font-weight: 500 !important;
+
+                    &.error {
+                        margin-bottom: 24px;
+                    }
+
+                    mat-label {
+                        color: #B00020 !important;
+                        font-weight: 500 !important;
+                        letter-spacing: 0.4px;
+                        font-size: 16px;
+                    }
+
+                    .mat-form-field-wrapper {
+                        padding-bottom: 1.14375em !important;
+                    }
+
+                    &.focused {
+                        .mat-form-field-wrapper {
+                            .mat-form-field-flex {
+                                .mat-form-field-outline {
+                                    .mat-form-field-outline-start {
+                                        border: 1px solid #B00020 !important;
+                                        border-right-style: none !important;
+                                        border-width: 2px !important;
+                                    }
+
+                                    .mat-form-field-outline-gap {
+                                        border: 1px solid #B00020 !important;
+                                        border-left-style: none !important;
+                                        border-right-style: none !important;
+                                        border-top-style: none !important;
+                                        border-width: 2px !important;
+                                        //width:60px !important;
+                                    }
+
+                                    .mat-form-field-outline-end {
+                                        border: 1px solid #B00020 !important;
+                                        border-left-style: none !important;
+                                        border-width: 2px !important;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+
+                    ::placeholder {
+                        /* Chrome, Firefox, Opera, Safari 10.1+ */
+                        color: #B00020 !important;
+                        font-weight: 500 !important;
+                        font-size: 16px !important;
+                        /* Firefox */
+                    }
+
+                    :-ms-input-placeholder {
+                        /* Internet Explorer 10-11 */
+                        color: #B00020 !important;
+                        font-weight: 500 !important;
+                        font-size: 16px !important;
+                    }
+
+                    ::-ms-input-placeholder {
+                        /* Microsoft Edge */
+                        color: #B00020 !important;
+                        font-weight: 500 !important;
+                        font-size: 16px !important;
+                    }
+
+                    input {
+                        border: none;
+                        outline: unset;
+                        z-index: 10;
+                        cursor: text;
+                        color: #000000BC;
+                        letter-spacing: 0.15px;
+                        font-size: 16px !important;
+                        caret-color: #C3001E !important;
+                    }
+
+                }
+
+                button {
+                    margin-bottom: 0 !important;
+                    background-color: #C3001E !important;
+                    width: 100%;
+                    height: 100%;
+                    max-width: 98px;
+                    max-height: 36px;
+                    letter-spacing: 1.25px;
+                    font-weight: 400;
+                }
+            }
+
+        }
+
+    }
+
+}

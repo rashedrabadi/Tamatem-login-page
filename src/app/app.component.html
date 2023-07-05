@@ -1,0 +1,25 @@
+<mat-card class="form-container">
+  <form (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading">
+    <div class="form-group">
+      <img src="https://avatars.githubusercontent.com/u/124091983" height="200" width="200" alt="Tamatem logo"
+        *ngIf="!isLoading">
+      <mat-form-field [class.focused]="EMAIL.isFocus" [hideRequiredMarker]="true"
+        [class.error]="emailInput.invalid && emailInput.touched" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput name="email" ngModel type="email" placeholder="Email" #emailInput="ngModel" appDetectFocus
+          #EMAIL="detectFocus" required email>
+        <mat-error *ngIf="emailInput.invalid && emailInput.touched">invalid Email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field [class.focused]="PASSWORD.isFocus" [hideRequiredMarker]="true"
+        [class.error]="passwordInput.invalid && passwordInput.touched" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input name="password" type="password" ngModel matInput placeholder="Password" #passwordInput="ngModel" appDetectFocus
+          #PASSWORD="detectFocus" required>
+        <mat-error *ngIf="passwordInput.invalid && passwordInput.touched">invalid Password</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="accent" type="submit" *ngIf="!isLoading">LOGIN</button>
+
+    </div>
+  </form>
+</mat-card>
